@@ -1,0 +1,401 @@
+/*
+Nada -> Ajustes a un Tipo de etiqueta -> etiqueta{}
+# -> Ajustes a una etiqueta con un ID específico -> #id_etiqueta{}
+. -> Ajustes a etiquetas dentro de una Clase -> .clase_etiquetas{}
+*/
+
+header{
+    width: auto;
+    background-color: azure;
+    height: 75px;
+    /*display: flex;*/
+}
+
+#logo{
+    position: relative;/*Absoluto: En respecto al padre     Relativo: En respecto al elemento anterior*/
+    display: inline; /*Display en "inline" convierte el elemento a un elemento en línea para compartir línea con otros elementos*/
+}
+
+/*
+Se puede especificar el estilo de elementos que se encuentren dentro de un contenedor.
+En este caso, todas las etiquetas <img> contenidas dentro de la etiqueta con ID "logo" serán afectadas por esto.
+*/
+#logo img{
+    width: auto;
+    height: 75px;
+}
+
+h1{
+    position: relative;
+    display: inline; /*Display en "inline" convierte el elemento a un elemento en línea para compartir línea con otros elementos*/
+}
+
+.btn_Header{
+    border: none;
+    background-color:transparent;
+    font-size: 2rem;
+    font-weight: bolder;
+    /*padding: 1rem; /*'padding' define la separación entre el contenido y el borde de su contenedor. */
+    margin: 1rem 1rem; /*'margin' define la separación entre objetos. 
+                          Pueden especificarse hasta 4 tamaños para cada lado (Arriba, Derecha, Abajo, Izquierda)
+                          También existen margin específicos como margin-left o margin-top.*/
+}
+
+#avisos{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(170, 170, 170, 0.521);
+}
+
+#searchDiv{
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+
+#btn_Cerrar{
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+#btn_Menu{
+    border: none;
+    color:black;
+    text-shadow: none;
+}
+
+#btn_Busqueda{
+    border: none;
+    color:black;
+    text-shadow: none;
+}
+
+#btn_Cuenta{
+    border: none;
+    color:black;
+    text-shadow: none;
+}
+
+#btn_Carrito{
+    border: none;
+    color:black;
+    text-shadow: none;
+}
+
+/******** FORMULARIO DE LOGIN *********/
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  .logbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }  
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+/**************************************/
+
+/****** Texto de los Sliders ******/
+.carousel-caption{
+    background-color:rgba(23, 23, 23, 0.521);
+}
+
+.h3_cat{
+    color: white;
+    padding: 0.2rem 0;
+    background-color: rgba(129, 14, 244, 0.638);
+    text-shadow: #000 -1.5px -1.5px 0,
+    #000 1.5px 1.5px 0,
+    #000 -1.5px 1.5px 0,
+    #000 1.5px -1.5px 0;
+}
+
+/****** Categorías ******/
+#categorias{
+    flex-flow: row nowrap;
+}
+
+.card{
+    width: 25%;
+}
+
+/****** MAIN ******/
+main{
+    background: gray url(../img/background2_white.png) top left;
+    background-attachment: fixed;
+}
+
+/******* Productos destacados *******/
+.prod_Dest{
+    border: 2px solid red;
+    border-top: gray dotted 2px;
+    margin: 1rem;
+    padding-top: 1rem;
+}
+
+.h3_prod{
+    color: white;
+    padding: 0.2rem 0;
+    background-color: rgba(129, 14, 244, 0.638);
+    text-shadow: #000 -1.5px -1.5px 0,
+    #000 1.5px 1.5px 0,
+    #000 -1.5px 1.5px 0,
+    #000 1.5px -1.5px 0;
+}
+
+.img_Frame{
+    width: 200px;
+    height: 200px;
+    border: cyan solid 5px;
+    border-radius: 250px;
+    padding: .5em;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.img_ProdDest{
+    width: 100%;
+    height: 100%;
+    border: gainsboro solid;
+    border-radius: 250px;
+}
+
+#prod_1{
+    background: white url(../img/productos/ryzen77800x.webp) no-repeat center center;
+    background-size: 190%;
+}
+
+#prod_2{
+    background: white url(../img/productos/i513600k.webp) no-repeat center center;
+    background-size: 160%;
+}
+
+#prod_3{
+    background: white url(../img/productos/ryzen55600x.webp) no-repeat center center;
+    background-size: 180%;
+}
+
+.btn_ProdDest{
+    background: white;
+}
+
+.detall_Prod{
+   border: 2px solid purple;
+   width: 100%;
+   margin-left: 0%;
+}
+
+.detall_Prod h4{
+    color: white;
+    background-color: rgba(82, 215, 255, 0.83);
+    padding: .5rem;
+    border-radius: 1rem;
+    width: 100%;
+    /*min-width: 400px;*/
+    
+    text-shadow: #000 -1.5px -1.5px 0,
+    #000 1.5px 1.5px 0,
+    #000 -1.5px 1.5px 0,
+    #000 1.5px -1.5px 0;
+}
+
+.detall_Prod p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.detall_Prod button{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: white;
+}
+
+/******* Footer *******/
+footer{
+    height: 175px; /*El footer usualmente se coloca con 175px de alto*/
+    background-color: darkgray;
+}
+
+/******* Responsive Design *******/
+
+/*Usar @media screen permite especificar cambios que se realizan cuando se cumplen ciertas condiciones en el tamaño de la pantalla.
+  En este caso se especifica que cuando la pantalla tenga un ancho máximo de 600px (<600px) se apliquen ciertos cambios.
+*/
+
+@media screen and (min-width: 1024px){
+
+}
+
+@media screen and (max-width: 1023px){
+
+}
+
+@media screen and (max-width: 767px){
+    .btn_Header{
+        font-weight: lighter;
+        color: grey;
+        margin: 0; 
+    }
+
+    #categorias{
+        flex-flow: row wrap;
+    }
+
+    #ofer_y_prom{
+        flex-flow: row wrap;
+    }
+
+    .card{
+        width: 43%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .btn_Header{
+        size: 1rem;
+        margin: 0;
+    }
+
+    header h2{
+        display: none;
+    }
+
+    #categorias{
+        flex-flow: row wrap;
+    }
+
+    #ofer_y_prom{
+        flex-flow: row wrap;
+    }
+
+    .card{
+        font-weight: bolder;
+        width: 100%;
+    }
+
+    .card a{
+        display: none;
+    }
+}

@@ -1,0 +1,311 @@
+ <!-- TODO HTML debe tener esta etiqueta al inicio -->
+<!DOCTYPE html>
+<!-- Los comentarios en HTML se colocan de esta forma btw :D -->
+<html lang="es">
+    <head>
+        <!-- Las etiquetas <meta> definen características específicas de la página web.
+             Estas sirven para comunicar información a la página web o a otras páginas web que se enlacen con esta. Por ejemplo:
+             - "charset" permite definir el set de carácteres que utilizará la página.
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aquí se coloca la descripción de la página">
+        <meta name="author" content="Anand Muñoz Espinoza">
+        <title>Mi primer HTML5</title>
+        <!-- La etiqueta <style> modifica el estilo de todos los elementos que se especifiquen en el interior de ella -->
+        <style>
+        </style>
+        <!-- La etiqueta <link> permite enlazar la página web junto con otros elementos especificados en una ruta relativa.
+             -El atributo "rel" indica el tipo de relación que se hará, en este caso "stylesheet" se usa para aplicar los estilos
+              especificados en el atributo "href".
+             -El atributo "href" se usa para especificar la ruta relativa a la que se hará referencia en el atributo "link".
+        -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="css/estilos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        
+    </head>
+    <body>
+        <!-- <header> se utiliza para  colocar menús o texto que siempre serán visibles en la parte superior de la página-->
+        <header class="d-flex justify-content-between align-items-center">
+            <div id="btn_Menu">
+                <i class="btn_Header bi bi-list"></i>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <!-- <div> es una etiqueta que se utiliza para crear un contenedor genérico -->
+                <div id="logo">
+                    <!-- <img> se utiliza para colocar la imagen en la ruta especificada en el atributo "src" -->
+                    <img src="img/master_race_logo.png">
+                </div> 
+
+                <h2>Hardware MasterRace</h2>
+            </div>
+
+            <nav>
+                <button id="btn_Busqueda" class="btn_Header">
+                    <i class="bi bi-search"></i>
+                </button>
+                <button id="btn_Cuenta" class="btn_Header">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+                <button id="btn_Carrito" class="btn_Header">
+                    <i class="bi bi-cart"></i>
+                </button>
+            </nav>
+        </header>
+
+        <section id="avisos">
+            <!-- DivSearch -->
+            <div id="searchDiv" class="container w-25 animate">
+                <!-- <span> encapsula contenido sin reflejarlos visualmente-->
+                <span id="btn_Cerrar" class="close">&times;</span>
+                <form class="form-control" name="search" action="">
+                    <input type="text" name="searchInput" placeholder="Buscar...">
+                    <button id="btn_Buscar" class="btn_Header">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- ************************* -->
+        </section>
+
+        <!-- Formulario de Login Modal de W3Schools -->
+
+        <!-- The Modal -->
+        <div id="form_Login" class="modal">
+            <span id="close_Login" class="close" title="Close Modal">&times;</span>
+
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="" method="POST">
+                <div class="imgcontainer">
+                    <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Usuario</b></label>
+                    <input type="text" placeholder="Usuario" name="uname" required>
+
+                    <label for="psw"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Contraseña" name="psw" required>
+
+                    <button type="submit" class="logbtn">Iniciar sesión</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Recordarme
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button id="btn_Cancelar" type="button" class="logbtn cancelbtn">Cancelar</button>
+                    <span class="psw">Olvidaste tu <a href="#">contraseña?</a></span>
+                </div>
+            </form>
+        </div>
+
+        <!-- <main> se utiliza para  almacenar el contenido específico de toda la página -->
+        <main>
+            <!-- <section> se utiliza para crear secciones específicas dentro del cuerpo de la página
+                -El atributo 'id' es para el identificador del <section>. No debe usar caracteres especiales .
+                -El atributo 'class' permite agrupar varios elementos específicos en una misma Clase, lo que permite ajustar sus
+                 características de forma agrupada.
+            -->
+            <!-- Código sacado de DOCS de Bootstrap para un Slider de imágenes con títulos, captions e indicadores -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/slider-1.jpg" class="d-block w-100" alt="Componentes PC">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Componentes de última generación</h5>
+                            <p>Con nuestros componentes, mantén actualizado el hardware de tu PC</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/slider-2.jpg" class="d-block w-100" alt="Componentes PC">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Más Componentes</h5>
+                            <p>De no tan reciente generación</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/slider-3.jpg" class="d-block w-100" alt="Componentes PC">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Todavía más componentes</h5>
+                            <p>Muchos, muchos componentes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/slider-4.jpg" class="d-block w-100" alt="Componentes PC">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>COMPONENTES</h5>
+                            <p>COMPONENTESCOMPONENTESCOMPONENTESCOMPONENTESCOMPONENTESCOMPONENTESCOMPONENTES</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!--****** Categorías populares ******-->
+            <h3 class="h3_cat">Categorías populares...</h3>
+
+            <section id="categorias" class="d-flex">
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_ga.png" class="card-img-top" alt="Tarjetas Gama Alta">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama alta</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gm.png" class="card-img-top" alt="Tarjetas Gama Media">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama media</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gb.png" class="card-img-top" alt="Tarjetas Gama Baja">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama baja</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gb.png" class="card-img-top" alt="Tarjetas Gama Baja">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama baja</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gb.png" class="card-img-top" alt="Tarjetas Gama Baja">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama baja</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--****** Ofertas y Promociones ******-->
+            <h3 class="h3_cat">Ofertas y promociones</h3>
+
+            <section id="ofer_y_prom" class="d-flex">
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_ga.png" class="card-img-top" alt="Tarjetas Gama Alta">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama alta</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gm.png" class="card-img-top" alt="Tarjetas Gama Media">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama media</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gb.png" class="card-img-top" alt="Tarjetas Gama Baja">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama baja</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gb.png" class="card-img-top" alt="Tarjetas Gama Baja">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama baja</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+
+                <div class="card m-2">
+                    <img src="img/categorias/cat_gc_gb.png" class="card-img-top" alt="Tarjetas Gama Baja">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarjetas Gráficas</h5>
+                      <p class="card-text">Gama baja</p>
+                      <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--****** Productos Destacados ******-->
+            <h3 class="h3_prod">Productos destacados</h3>
+
+            <section class="d-flex flex-wrap">
+                <div class="prod_Dest">
+                    <div class="img_Frame">
+                        <div id="prod_1" class="img_ProdDest"></div>
+                    </div>
+                    <div class="detall_Prod row">
+                        <h4>Procesador AMD Ryzen 7 7800X</h4>
+                        <p>A solo $7,200.00</p>
+                        <button class="btn btn-info">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <div class="prod_Dest">
+                    <div class="img_Frame">
+                        <div id="prod_2" class="img_ProdDest"></div>
+                    </div>
+                    <div class="detall_Prod row">
+                        <h4>Procesador Intel i5-13600K</h4>
+                        <p>A solo $6,600.00</p>
+                        <button class="btn btn-info">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <div class="prod_Dest">
+                    <div class="img_Frame">
+                        <div id="prod_3" class="img_ProdDest"></div>
+                    </div>
+                    <div class="detall_Prod row">
+                        <h4>Procesador AMD Ryzen 5 7600X</h4>
+                        <p>A solo $4,200.00</p>
+                        <button class="btn btn-info">Comprar ahora</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- <footer> se utiliza para el pie de página -->
+        <footer>
+            Todos los derechos reservados
+        </footer>
+    </body>
+
+    <!-- Las etiquetas <script> se utilizan para insertar códigos de JavaScript. Estas se colocan al final del documento HTML
+         porque JavaScript es interpretado más rápidamente que HTML, por lo que si se llega a un Script antes  de que se genere
+         la página, es posible que genere errores de interpretación.    
+    -->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</html>
